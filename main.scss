@@ -1,0 +1,255 @@
+$black: rgb(0,0,0);
+$white:rgb(255,255,255);
+$pink:rgb(253,204,207);
+.part{
+  float: left;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 34px;
+  background: #eeeeee;
+}
+.main{
+  position: relative;
+  left:50px;
+  top:200px;
+  margin: 0 auto;
+  width:255px;
+  height:495px;
+}
+
+.div_ear{
+  position: absolute;
+  width:255px;
+  height:50px;
+}
+
+.ear{
+position: absolute;
+  width: 45px;
+  height:40px;
+  background: $black;
+  border-radius: 50%;
+  &.ear_left{
+    top:10px;
+    left:50px;
+    transform: rotate(30deg);
+  }
+  &.ear_right{
+    top:10px;
+    left: 150px;
+    transform: rotate(150deg);
+  }
+}
+
+.eye{
+  width:60px;
+  height:50px;
+  background: $black;
+  border-radius:60% ;
+  z-index: 2;
+  position: absolute;
+  top:80px;
+  &.eye_left{
+    left: 20px;
+    transform:rotate(120deg);
+  }
+  &.eye_right{
+    right: 20px;
+    transform:rotate(60deg);
+  }
+}
+.eye01{
+  width:32px;
+  height:30px;
+  position: relative;
+  top:8px;
+  left: 4px;
+  background: $white;
+  border-radius:50% ;
+}
+.eye02{
+  width:25px;
+  height:25px;
+  position: relative;
+  top:2px;
+  left: 2px;
+  background: $black;
+  border-radius:50% ;
+}
+.eye03{
+  width:14px;
+  height:14px;
+  position: relative;
+  top:2px;
+  left: 2px;
+  background: $white;
+  border-radius:50% ;
+}
+
+.face{
+  width: 250px;
+  height: 200px;
+  border-radius:50% 50% 30%  30%;
+  border:1px solid $black;
+  z-index: 2;
+  position: absolute;
+  top:20px;
+  background: $white;
+  overflow: hidden;
+
+}
+
+.cheek{
+  width:100px;
+  height: 50px;
+  border-radius:50px 50px  0  0;
+  background: $pink;
+  z-index: 1;
+  position: absolute;
+  top:130px;
+  &.cheek_left{
+    left:-20px;
+    transform:rotate( 60deg);
+  }
+  &.cheek_right{
+right: -20px;
+    transform:rotate( 300deg);
+  }
+}
+
+.nose{
+  height: 20px;
+  width: 10px;
+  top:110px;
+  left:(250-10)*0.5px;
+  position: absolute;
+  border-top: 1px solid $black;
+}
+.mouth{
+  width:80px;
+  height: 40px;
+  border-bottom:1px solid $black;
+  border-radius:0  0 40px 40px;
+  z-index: 1;
+  position: absolute;
+  top:120px;
+  left:86px;
+}
+
+.body{
+  width: 160px;
+  height: 140px;
+  border-radius:60%;
+  border:1px solid $black;
+  position: absolute;
+  z-index: 1;
+  top:210px;
+  left: (250-160)*0.5px;
+  background: $white;
+}
+.hand{
+  width: 100px;
+  height: 50px;
+  background: $black;
+  border-radius:60% ;
+  position: absolute;
+  top:220px;
+  &.hand_left{
+    left: 20px;
+    transform: rotate(120deg);
+  }
+  &.hand_right{
+    z-index: 1;
+    right: 10px;
+    transform: rotate(-110deg);
+  }
+}
+
+.leg{
+  width:60px;
+  height:140px;
+  background: $black;
+  border-radius:60% ;
+  position: absolute;
+  top:260px;
+  &.leg_left{
+    left: 70px;
+  }
+  &.leg_right{
+    right: 70px;
+  }
+
+}
+
+.yin-yang {
+  width: 96px;
+  height: 48px;
+  background: $white;
+  border-color: $black;
+  border-style: solid;
+  border-width: 2px 2px 50px 2px;
+  border-radius: 100%;
+  position: relative;
+  top:210px;
+  left: -38px;
+ // top:230px;
+ // left: 60px;
+ // z-index: 2;
+  transform: rotate(100deg);
+  animation:myfirst 2s;
+  -moz-animation:myfirst 5s; /* Firefox */
+  -webkit-animation:myfirst 5s; /* Safari and Chrome */
+  -o-animation:myfirst 5s; /* Opera */
+}
+
+@keyframes myfirst
+{
+  from {background:#eee;border-color:red;}
+  to {background:$black;border-color:$black; }
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+  from {background:#eee;border-color:red;}
+  to {background:$black;border-color:$black; }
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+  from {background:#eee;border-color:red;}
+  to {background:$black;border-color:$black; }
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+  from {background:#eee;border-color:red;}
+  to {background:$black;border-color:$black; }
+}
+
+
+.yin-yang:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: $white;
+  border: 18px solid $black;
+  border-radius: 100%;
+  width: 12px;
+  height: 12px;
+}
+
+
+.yin-yang:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: $black;
+  border: 18px solid $white;
+  border-radius:100%;
+  width: 12px;
+  height: 12px;
+}
