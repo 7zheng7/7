@@ -29,11 +29,27 @@
   .ear.ear_left {
     top: 10px;
     left: 50px;
-    transform: rotate(30deg); }
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    /* for Chrome || Safari */
+    -moz-transform: rotate(30deg);
+    /* for Firefox */
+    -ms-transform: rotate(30deg);
+    /* for IE */
+    -o-transform: rotate(30deg);
+    /* for Opera */ }
   .ear.ear_right {
     top: 10px;
     left: 150px;
-    transform: rotate(150deg); }
+    transform: rotate(150deg);
+    -webkit-transform: rotate(150deg);
+    /* for Chrome || Safari */
+    -moz-transform: rotate(150deg);
+    /* for Firefox */
+    -ms-transform: rotate(150deg);
+    /* for IE */
+    -o-transform: rotate(150deg);
+    /* for Opera */ }
 
 .eye {
   width: 60px;
@@ -48,7 +64,15 @@
     transform: rotate(120deg); }
   .eye.eye_right {
     right: 20px;
-    transform: rotate(60deg); }
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    /* for Chrome || Safari */
+    -moz-transform: rotate(60deg);
+    /* for Firefox */
+    -ms-transform: rotate(60deg);
+    /* for IE */
+    -o-transform: rotate(60deg);
+    /* for Opera */ }
 
 .eye01 {
   width: 32px;
